@@ -65,10 +65,10 @@ function renderState(payload = {}) {
   const maxLevel = payload.maxLevel || 1;
   const progress = Math.min(100, Math.max(0, (level / maxLevel) * 100));
 
-  arenaEl.textContent = payload.arena?.label || 'GunGame';
+  arenaEl.textContent = (payload.arena && payload.arena.label) || 'GunGame';
   statusEl.textContent = payload.status || 'waiting';
   levelEl.textContent = `Level ${level}/${maxLevel}`;
-  weaponEl.textContent = payload.weapon?.label || '-';
+  weaponEl.textContent = (payload.weapon && payload.weapon.label) || '-';
   playersEl.textContent = `${payload.playerCount || 0}/${payload.requiredPlayers || 0} spelers`;
   killsEl.textContent = payload.kills || 0;
   deathsEl.textContent = payload.deaths || 0;
@@ -159,7 +159,7 @@ function finish(payload = {}) {
   if (payload.winnerName) {
     showToast({
       kind: 'success',
-      message: `${payload.winnerName} wint ${payload.arena?.label || 'GunGame'}!`,
+      message: `${payload.winnerName} wint ${(payload.arena && payload.arena.label) || 'GunGame'}!`,
     });
   }
 
