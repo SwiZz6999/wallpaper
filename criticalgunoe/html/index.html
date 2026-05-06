@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CriticalGunOE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="hud" class="hidden">
+        <section class="panel hero">
+            <div>
+                <p class="eyebrow">CriticalGunOE</p>
+                <h1 id="arena">GunGame</h1>
+            </div>
+            <div class="timer">
+                <span id="timer">--:--</span>
+                <small id="status">Wachten</small>
+            </div>
+        </section>
+
+        <section class="panel progress">
+            <div class="progress-meta">
+                <span id="level">Level 1/1</span>
+                <strong id="weapon">Pistol</strong>
+            </div>
+            <div class="bar"><span id="bar"></span></div>
+            <div class="stats">
+                <span>Kills <strong id="kills">0</strong></span>
+                <span>Deaths <strong id="deaths">0</strong></span>
+                <span>Streak <strong id="streak">0</strong></span>
+            </div>
+        </section>
+
+        <section class="panel scoreboard">
+            <div class="scoreboard-title">
+                <span>Scoreboard</span>
+                <small id="players">0 spelers</small>
+            </div>
+            <ol id="scoreboard"></ol>
+        </section>
+
+        <section id="countdown" class="countdown hidden"></section>
+        <section id="killfeed" class="killfeed"></section>
+    </main>
+
+    <section id="menu" class="menu hidden">
+        <div class="menu-card">
+            <header>
+                <p class="eyebrow">CriticalGunOE</p>
+                <h2>Standalone GunGame</h2>
+                <button id="close" type="button">x</button>
+            </header>
+            <p class="muted">Kies een arena of verlaat je huidige match.</p>
+            <div id="arenas" class="arenas"></div>
+            <div class="menu-actions">
+                <button id="leave" type="button" class="danger">Verlaat GunGame</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="toasts" class="toasts"></section>
+
+    <script src="app.js"></script>
+</body>
+</html>
