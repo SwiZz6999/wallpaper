@@ -1,3 +1,7 @@
+if type(Config) ~= 'table' then
+    error('[criticalgunoe] Config is niet geladen. Controleer of shared/config.lua bestaat en in fxmanifest.lua bij shared_scripts staat.', 0)
+end
+
 local state = {
     inMatch = false,
     status = 'idle',

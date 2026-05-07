@@ -11,7 +11,7 @@ version '1.0.0'
 ui_page 'html/index.html'
 
 shared_scripts {
-    'config.lua',
+    'shared/config.lua',
     'shared/locales.lua'
 }
 
